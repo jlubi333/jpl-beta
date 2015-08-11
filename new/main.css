@@ -1,0 +1,119 @@
+/* Animations */
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotateZ(0deg);
+        }
+        100% {
+            -webkit-transform: rotateZ(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotateZ(0deg);
+        }
+        100% {
+            -moz-transform: rotateZ(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+
+/* General */
+
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        background-color: #111111;
+        font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        color: #FFFFFF;
+    }
+
+/* Main Header */
+
+    #main-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    #main-header {
+        text-align: center;
+        margin: auto;
+    }
+
+        h1, h1::before {
+            display: flex;
+            border: 3px solid transparent;
+            font-weight: 100;
+            font-size: 5em;
+            width: 30vw;
+            height: 30vw;
+            margin: auto;
+            border-radius: 50%;
+        }
+
+            h1::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                border-top-color: #FF3300;
+                border-right-color: #FF8000;
+                border-bottom-color: #AAF200;
+                border-left-color: #00C6FF;
+                -webkit-animation: spin 7s infinite linear; 
+            }
+
+            h1 span {
+                margin: auto;
+            }
+
+        #main-nav {
+            list-style-type: none;
+            margin-top: 1vw;
+        }
+
+            #main-nav li, #main-nav li::before {
+                display: inline-flex;
+                border: 3px solid transparent;
+                font-weight: 100;
+                font-size: 1.5em;
+                border-radius: 50%;
+                width: 15vw;
+                height: 15vw;
+                margin: 0 1vw;
+                float: left;
+            }
+
+                #main-nav li::before {
+                    content: "";
+                    position: absolute;
+                    border-top-color: #FF3300;
+                    -webkit-animation: spin 0.5s infinite linear; 
+                }
+
+                #main-nav li span {
+                    margin: auto;
+                }

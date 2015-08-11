@@ -1,0 +1,32 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+html
+{
+	min-height: 100%;
+}
+
+body
+{
+	background-color: #333333;
+}
+
+.colored-line
+{
+	height: 5px;
+	background-image: -webkit-linear-gradient(
+		-45deg,
+		#FF3300,
+		#FF3300 25%,
+		#FF8000 25%,
+		#FF8000 50%,
+		#AAF200 50%,
+		#AAF200 75%,
+		#00C6FF 75%,
+		#00C6FF 100%
+	);
+}

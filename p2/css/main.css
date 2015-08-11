@@ -1,0 +1,307 @@
+/* General */
+
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        background-color: #222222;
+        background-image: url("../img/portfolio_bg.png");
+        background-repeat: repeat;
+        color: #FFFFFF;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    a {
+        color: #00DDFF;
+        font-style: italic;
+        -webkit-transition: 0.1s color;
+        -moz-transition: 0.1s color;
+        -ms-transition: 0.1s color;
+        -o-transition: 0.1s color;
+        transition: 0.1s color;
+    }
+
+/* Classes */
+
+    .vertical-outer {
+        display: table;
+    }
+
+    .vertical-inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .left {
+        width: 50%;
+        float: left;
+    }
+
+    .right {
+        width: 50%;
+        float: right;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .line {
+        height: 1px;
+        background-color: #333333;
+    }
+
+    .nowrap {
+        white-space: nowrap;
+    }
+
+/* Home */
+
+    #home {
+        height: 100%;
+        width: 400px;
+        background-color: #111111;
+        background-image: url("../img/home_bg.png");
+        background-repeat: repeat;
+        box-shadow: 0 0 5px 0 #000000;
+        position: fixed;
+    }
+
+/* Main Header */
+/* (Ribbon source: https://css-tricks.com/snippets/css/ribbon/) */
+
+    #main-header {
+        background-color: #111111;
+        text-align: center;
+        margin: 20px -10px;
+        padding: 20px;
+        box-shadow: 0 1px 5px 0 #000000;
+        position: relative;
+    }
+
+        #main-header:after {
+            content: "";
+            display: block;
+            border-width: 10px 10px 0 0;
+            border-style: solid;
+            border-color: #000000 transparent transparent transparent;
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+        }
+
+        #main-header h1 {
+            color: #FFFFFF;
+            font-size: 2em;
+            font-weight: 100;
+        }
+
+        #main-header p {
+            color: #555555;
+        }
+
+    #header-left {
+        width: 3px;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+    }
+
+        #header-left div {
+            width: 100%;
+            height: 25%;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+        }
+        #header-left .a {
+            background-color: #FF3300;
+            top: 0;
+        }
+        #header-left .b {
+            background-color: #FF8000;
+            top: 25%;
+        }
+        #header-left .c {
+            background-color: #AAF200;
+            top: 50%;
+        }
+        #header-left .d {
+            background-color: #00C6FF;
+            top: 75%;
+        }
+
+/* Footer */
+
+    #home-footer {
+        padding: 20px 0;
+        border-top: 1px solid #333333;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+    }
+
+        #home-footer p {
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+/* About */
+
+    #about {
+        padding: 0 20px;
+    }
+
+    #about p {
+        line-height: 1.3em;
+        margin-bottom: 10px;
+    }
+
+/* Portfolio List */
+
+    #portfolio {
+        margin-left: 400px;
+        padding: 40px;
+    }
+
+        #portfolio h1, #portfolio h2 {
+            font-family: "Roboto Slab", "Georgia", serif;
+            font-weight: 100;
+        }
+
+            #portfolio h1:first-letter, #portfolio h2:first-letter {
+                font-weight: 900;
+            }
+
+        #portfolio h1 {
+            font-size: 4em;
+        }
+
+        #portfolio h2 {
+            font-size: 2em;
+            margin: 10px;
+            padding: 10px;
+            border-top: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+        }
+
+    .portfolio-list {
+        list-style-type: none;
+    }
+
+        .portfolio-list li {
+            margin: 20px;
+            padding: 20px;
+            box-shadow: inset 0 0px 7px 0 #000000;
+        }
+
+            .portfolio-list li h3 {
+                display: inline-block;
+                color: #00C6FF;
+                font-family: "Roboto Slab", "Georgia", serif;
+                font-size: 1.3em;
+                border-bottom: 1px solid transparent;
+                -webkit-transition: 0.2s border-bottom-color;
+                -moz-transition: 0.2s border-bottom-color;
+                -ms-transition: 0.2s border-bottom-color;
+                -o-transition: 0.2s border-bottom-color;
+                transition: 0.2s border-bottom-color;
+            }
+
+                .portfolio-list li h3 a {
+                    color: #00C6FF;
+                    text-decoration: none;
+                    font-style: normal;
+                }
+
+            .portfolio-list li h3:hover
+            {
+                border-bottom-color: #00C6FF;
+            }
+
+
+            .portfolio-list li:nth-of-type(4n+1) h3,
+            .portfolio-list li:nth-of-type(4n+1) a
+            {
+                color: #FF3300;
+            }
+                .portfolio-list li:nth-of-type(4n+1) h3:hover
+                {
+                    border-bottom-color: #FF3300;
+                }
+
+            .portfolio-list li:nth-of-type(4n+2) h3,
+            .portfolio-list li:nth-of-type(4n+2) a
+            {
+                color: #FF8000;
+            }
+                .portfolio-list li:nth-of-type(4n+2) h3:hover
+                {
+                    border-bottom-color: #FF8000;
+                }
+
+            .portfolio-list li:nth-of-type(4n+3) h3,
+            .portfolio-list li:nth-of-type(4n+3) a
+            {
+                color: #AAF200;
+            }
+                .portfolio-list li:nth-of-type(4n+3) h3:hover
+                {
+                    border-bottom-color: #AAF200;
+                }
+
+            .portfolio-list li p {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #333333;
+            }
+
+    .portfolio-left {
+        margin-right: 300px;
+    }
+
+        .portfolio-left img {
+            width: 100%;
+            border: 1px solid #333333;
+            border-radius: 3px;
+        }
+
+    .portfolio-right {
+        width: 300px;
+        padding: 0 20px;
+        float: right;
+    }
+
+/* About Image */
+
+    #about-image {
+        display: block;
+        width: 70%;
+        margin: auto;
+        border-radius: 3px;
+    }
+
+/* Education */
+
+    .education {
+        padding: 20px;
+    }
